@@ -35,6 +35,9 @@ pip install -r requirements.txt
 ```bash
 python -m uvicorn app.main:app --reload
 
+### Open Swagger UI in browser:
+http://127.0.0.1:8000/docs
+
 
 ## API Usage Examples
 
