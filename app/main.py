@@ -9,7 +9,6 @@ from app.database import db
 
 app = FastAPI(title="Agentic AI Backend")
 
-# store last uploaded document path
 
 
 class QuestionRequest(BaseModel):
@@ -28,7 +27,7 @@ async def upload_file(file: UploadFile = File(...)):
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
-    state.LAST_UPLOADED_DOC = file_path   # 👈 shared update
+    state.LAST_UPLOADED_DOC = file_path   
 
     return {
         "message": "File uploaded successfully",
