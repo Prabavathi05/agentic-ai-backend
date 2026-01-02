@@ -11,7 +11,7 @@ API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
 def get_weather(city: str, day: str):
     if not API_KEY:
-        return "Weather API key not found ❌"
+        return "Weather API key not found "
 
     url = "https://api.openweathermap.org/data/2.5/weather"
     params = {
@@ -23,10 +23,10 @@ def get_weather(city: str, day: str):
     response = requests.get(url, params=params)
 
     if response.status_code != 200:
-        return f"Weather API error ❌ (status code: {response.status_code})"
+        return f"Weather API error (status code: {response.status_code})"
 
     data = response.json()
     temp = data["main"]["temp"]
     description = data["weather"][0]["description"]
 
-    return f"The weather in {city} today is {description} with temperature {temp}°C 🌤️"
+    return f"The weather in {city} today is {description} with temperature {temp}°C "
