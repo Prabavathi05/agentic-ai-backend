@@ -12,6 +12,6 @@ def answer_from_document(question: str, document_text: str) -> str:
     q = question.lower()
 
     if q in document_text.lower():
-        return "Answer found in document 📄"
+        return "Answer found in document "
     
-    return "Answer not found in document. Need web search 🌐"
+    return "Answer not found in document. Need web search "
