@@ -7,3 +7,4 @@ class Meeting(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String)
     date = Column(Date)
+
