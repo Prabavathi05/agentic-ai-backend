@@ -50,3 +50,6 @@ Example request body:
 {
   "question": "What is the weather in Chennai today?"
 }
+
+This project demonstrates an agentic-style backend using LLMs and vector search.
+Minor formatting cleanup
